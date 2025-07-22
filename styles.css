@@ -1,6 +1,3 @@
-/* .test {
-  color: red;
-} */
 * {
   margin: 0;
   padding: 0;
@@ -12,26 +9,9 @@ body {
   position: relative;
 }
 
-/* .logo {
-  background-color: #ffe17f;
-} */
-
 .header-bg {
   background-color: #ffe17f;
-  padding: 40px 0 10px 0;
-}
-
-/* .logo {
-  margin-bottom: 100px;
-} */
-
-.logo-wrapper,
-.first-nav,
-.main-nav {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
+  padding: 17px 0 10px 0;
 }
 
 .container {
@@ -41,32 +21,32 @@ body {
   margin-top: 20px;
 }
 
-/* .first-nav {
-  font-family: "Rubik", sans-serif;
-  font-style: regular;
-} */
+.logo-wrapper {
+  margin-bottom: 10px;
+  padding-top: 23px;
+  position: relative;
+  top: -40px;
+}
 
-p {
-  color: #444444;
-  font-family: "Rubik", sans-serif;
+.logo-wrapper,
+.first-nav,
+.main-nav {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.first-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 517px;
+  position: relative;
+  top: -15px;
 }
 
 ul {
   list-style-type: none;
-}
-
-/* nav a:link {
-  margin-right: 30px;
-  margin-top: 10px;
-  display: inline-block;
-} */
-
-.first-nav {
-  display: flex;
-  justify-content: space-between; /* Форма слева, навигация справа */
-  align-items: center;
-  width: 100%; /* Выравнивание по центру по вертикали */
-  /* gap: 5px; */
 }
 
 .left-group {
@@ -83,7 +63,6 @@ ul {
   height: 40px;
   min-width: 517px;
   overflow: hidden;
-  /* padding-right: 20px; или другое значение */
 }
 
 .left-nav-list,
@@ -114,7 +93,8 @@ ul {
   text-decoration: none;
   font-size: 18px;
   margin-left: 0;
-  /* margin-right: 12px; */
+  position: relative;
+  z-index: 10;
 }
 
 .left-nav-list,
@@ -125,7 +105,8 @@ ul {
 .circle {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  z-index: 5;
   width: 21px;
   height: 21px;
   background-color: #fff;
@@ -134,25 +115,22 @@ ul {
   left: -17px;
 }
 
-.cart-count {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+.cart-icon {
+  position: relative;
+  z-index: 1;
 }
 
 .cart-icons-wrapper {
   position: relative;
   align-items: center;
+  display: flex;
+  top: -1px;
 }
 
 .cart-link {
   display: flex;
+  position: relative;
   gap: 10px;
-}
-
-.logo-wrapper {
-  margin-top: -63px;
-  margin-bottom: 15px;
 }
 
 .search-icon {
@@ -201,13 +179,14 @@ ul {
   margin-top: 30px;
   text-transform: uppercase;
   display: flex;
-  width: 100%;
+  min-width: 517px;
+  position: relative;
+  z-index: 10;
 }
 
 .main-nav-list {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   width: 100%;
 }
 
@@ -219,8 +198,6 @@ ul {
   text-decoration: none;
   font-size: 18px;
   margin-left: 10px;
-  /* margin-right: 15px; */
-
   letter-spacing: 5px;
 }
 
@@ -235,8 +212,10 @@ ul {
   align-items: center;
   justify-content: space-between;
   margin-left: 50px;
-  margin-right: -5px;
-  gap: 35px;
+  /* margin-right: -5px; */
+  position: relative;
+  right: -5px;
+  gap: 40px;
   width: 100%;
 }
 
@@ -261,35 +240,30 @@ ul {
   transition: all 0.2s ease !important;
 }
 
-/* .slider {
-  position: relative;
-  background-color: #ffe17f;
-  align-items: center;
-  display: flex;
-} */
-
 .slider-bg {
   background: linear-gradient(
     to bottom,
     #ffe17f 0%,
-    #ffe17f 30%,
-    #fff 30%,
+    #ffe17f 23%,
+    #fff 23%,
     #fff 100%
   );
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider {
-  /* background-color: #ffe17f; */
   position: relative;
   padding: 30px 10px 40px 10px;
-  /* padding-top: -50px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   min-height: 600px;
   overflow: visible;
   max-width: 1160px;
-  margin: -80px auto 0 auto;
+  margin: 0 auto 0 auto;
+  top: -50px;
 }
 
 .slider div:last-child {
@@ -366,28 +340,24 @@ ul {
 .slider-text h1 {
   font-size: 50px;
   font-weight: 800;
-  font-style: bold;
   width: 545px;
   color: #000;
-  /* margin: 0 0 30px 0; */
   font-family: "Raleway", sans-serif;
   line-height: 1.1;
   position: relative;
+  padding-top: 30px;
   z-index: 1;
-  padding-top: -25px;
-  margin-left: -45px;
-  /* padding-right: 20px; */
+  left: -45px;
 }
 
 .dron-description {
   font-size: 18px;
   color: #444444;
+  font-weight: 400;
   font-family: "Rubik", sans-serif;
   line-height: 1.6;
-  margin: 30px -5px 40px -45px;
-  max-width: 700px;
+  margin: 30px 0px 30px 0px;
+  min-width: 560px;
+  position: relative;
+  left: -45px;
 }
-/* 
-a:first-child {
-  /* margin-left: 0; */
-} */
