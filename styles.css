@@ -60,7 +60,7 @@ ul {
   align-items: center;
   border: 2px solid #000;
   border-radius: 50px;
-  height: 40px;
+  height: 36px;
   min-width: 517px;
   overflow: hidden;
 }
@@ -100,6 +100,12 @@ ul {
 .left-nav-list a img:hover,
 .right-nav-list a img:hover {
   transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.left-nav-list a img,
+.right-nav-list a img {
+  transition: 0.3s;
 }
 
 .left-nav-list,
@@ -226,6 +232,7 @@ ul {
 
 .main-links li:active {
   transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .main-nav .catalog-wrapper .quick-add-btn {
@@ -285,7 +292,7 @@ ul {
   z-index: 10;
   top: 45%;
   transform: translateY(-50%);
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1;
 }
 
@@ -311,7 +318,7 @@ ul {
 .slider-number {
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 40px;
   font-size: 180px;
   font-weight: 700;
   color: #ffffff;
@@ -356,13 +363,13 @@ ul {
   line-height: 1.1;
   position: relative;
   z-index: 1;
-  margin-top: 60px;
+  margin-top: 70px;
   padding-top: 20px;
 }
 
 .slider-text {
   flex-direction: column;
-  top: -30px;
+  margin-top: 20px;
 }
 
 .dron-description {
@@ -383,7 +390,8 @@ ul {
   align-items: center;
   display: flex;
   gap: 250px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  width: auto;
 }
 
 .more-details {
@@ -400,7 +408,7 @@ ul {
 
 .more-text-btn {
   position: relative;
-  left: -8px;
+  right: -43px;
   z-index: 1;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -408,27 +416,28 @@ ul {
   font-size: 18px;
   letter-spacing: 3px;
   color: #000;
-  padding-left: 50px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .more-text-btn:hover {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .more-text-btn:active {
   transform: scale(1.1);
-  background-color: transparent;
+  transition: 0.3s;
   border: none;
   cursor: pointer;
+  display: flex;
 }
 
-.more-details::before,
-.more-details::after {
+.more-details::before {
   position: absolute;
   width: 220px;
   content: "";
@@ -442,6 +451,10 @@ ul {
 .slider-dots {
   display: flex;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: -15px;
 }
 
 .dot-label {
@@ -453,17 +466,36 @@ ul {
   transition: all 0.2s ease;
 }
 
-.dot-radio {
+.dot-radio,
+.dot-radio-active {
   display: none;
+}
+
+.dot-label-active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #000;
+}
+
+.dot-label-active:hover {
+  border-color: #000000;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .dot-label:hover {
   border-color: #000000;
   transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .dot-label:active {
   background-color: #000;
+  transition: 0.3s;
 }
 
 .product-description {
@@ -515,6 +547,7 @@ ul {
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  transition: 0.3s;
 }
 
 .product-range-list {
@@ -534,6 +567,13 @@ ul {
   gap: 33px;
 }
 
+.product-icon-bg:hover {
+  background: #ffca1e;
+  transition: background 0.3s;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .product-range-list a {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -551,10 +591,6 @@ ul {
 .fit-br {
   white-space: nowrap;
   letter-spacing: -0.5px;
-}
-
-.product-range-list img:hover {
-  transform: scale(1.1);
 }
 
 .monopods {
@@ -612,7 +648,7 @@ ul {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: transparent;
   color: #000;
   position: relative;
@@ -652,8 +688,9 @@ ul {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 90px;
+  padding-top: 50px;
   padding-left: 75px;
+  top: 45px;
 }
 
 .service-description h2 {
@@ -677,5 +714,383 @@ ul {
 .service-description img {
   position: absolute;
   right: 50px;
-  /* bottom: 0; */
+  transform: translateY(10%);
+}
+
+.rare-item-delivery {
+  width: 1160px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  background-color: #f0f0f0;
+}
+
+.rare-item-delivery-container {
+  display: flex;
+  width: 100%;
+}
+
+.truck,
+.icon-i {
+  flex: 1;
+}
+
+.truck-bg {
+  background-color: #ffe17f;
+  width: 125px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.truck img {
+  display: block;
+}
+
+.truck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.truck-bg:hover {
+  background: #ffca1e;
+  transition: background 0.3s;
+  transition: 0.3s;
+}
+
+.rid-description {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  flex: 6;
+}
+
+.rid-description a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.rid-description p {
+  position: relative;
+  left: 10px;
+}
+
+.icon-i {
+  width: 125px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  left: 10px;
+}
+
+.icon-i a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-i img {
+  display: block;
+}
+
+.about-contacts {
+  width: 1160px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  margin-top: 50px;
+  cursor: pointer;
+  display: flex;
+  gap: 120px;
+  margin-bottom: 35%;
+}
+
+.about-us {
+  flex: 1;
+  min-width: 520px;
+  height: 493px;
+  position: relative;
+  padding-top: 40px;
+}
+
+.contacts {
+  flex: 1;
+  min-width: 532px;
+  height: 545px;
+  position: relative;
+  padding-top: 40px;
+}
+
+.about-us::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Верхний край элемента */
+  left: 0; /* Слева */
+  width: 84px; /* Длина линии - 84px */
+  height: 7px;
+  background: #000;
+}
+
+.abt-variety {
+  margin-bottom: 40px;
+}
+
+.abt-delivery {
+  margin-bottom: 40px;
+}
+
+.delivery-company {
+  margin-bottom: 40px;
+}
+
+.delivery-company li {
+  margin-bottom: 19px;
+}
+
+.abt-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.abt-pick-up {
+  margin-bottom: 40px;
+}
+
+.abt-variety,
+.abt-delivery,
+.abt-pick-up {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
+}
+
+.int-shop {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+.int-shop-list {
+  margin-bottom: 40px;
+}
+
+.address {
+  margin-bottom: 10px;
+}
+
+.phone-number {
+  text-decoration: underline;
+}
+
+.work-schedule {
+  margin-bottom: 40px;
+}
+
+.ws-title {
+  margin-bottom: 20px;
+}
+
+.week-days {
+  margin-bottom: 10px;
+}
+
+.delivery-company {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.delivery-company li::marker {
+  color: #ffc700;
+}
+
+.abt-wrap {
+  text-transform: uppercase;
+  z-index: 10;
+  position: relative;
+  letter-spacing: 3px;
+  display: flex;
+  width: 270px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.abt-more {
+  position: relative;
+  right: -10%;
+}
+
+.write-us {
+  position: relative;
+  right: -15%;
+}
+
+.abt-wrap p {
+  position: relative;
+  z-index: 10;
+  width: 270px;
+}
+
+.abt-wrap::before {
+  position: absolute;
+  width: 270px;
+  content: "";
+  top: 50%;
+  height: 8px;
+  background: #ffe17f;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.address,
+.phone-number {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
+}
+
+.ws-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #444444;
+}
+
+.work-schedule-list {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
+}
+
+.subscription-bg {
+  width: 100%;
+  height: 421px;
+  background-color: #f0f0f0;
+}
+
+.subscription {
+  width: 1160px;
+  height: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-text {
+  display: flex;
+  gap: 50px;
+  padding-top: 80px;
+  align-content: center;
+}
+
+.sub-text-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  width: 348px;
+  margin-right: 10%;
+}
+
+.sub-text-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
+  position: relative;
+  bottom: -15px;
+  margin-left: 10%;
+}
+
+.sub-form {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-form {
+  width: auto;
+  height: 57px;
+  display: flex;
+  flex: 1;
+  max-width: 875px;
+}
+
+.subscribe-form input[type="email"] {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #c4c4c4;
+  font-size: 18px;
+  font-weight: 400;
+  flex: 1;
+  background: transparent;
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  padding: 0 10px;
+  width: 600px;
+}
+
+.subscribe-form input::placeholder {
+  font-size: 18px;
+}
+
+.subscribe-form button {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px px;
+  height: 100%;
+  width: 245px;
+  font-weight: 800;
+  cursor: pointer;
+  border: 3px solid #c4c4c4;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+}
+
+.subscribe-form button:hover {
+}
+
+.its-free {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.free-text {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
 }
