@@ -95,6 +95,13 @@ ul {
   margin-left: 0;
   position: relative;
   z-index: 10;
+  transition: 0.3s;
+}
+
+.left-nav-list a:hover,
+.right-nav-list a:hover {
+  transition: 0.3s;
+  color: #fff;
 }
 
 .left-nav-list a img:hover,
@@ -230,8 +237,21 @@ ul {
   width: 100%;
 }
 
+.main-links li {
+  transition: 0.3s;
+}
+
 .main-links li:active {
   transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.main-links a {
+  transition: 0.3s;
+}
+
+.main-links a:hover {
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -254,6 +274,15 @@ ul {
   padding: 0 !important;
   line-height: 1 !important;
   transition: all 0.2s ease !important;
+}
+
+.catalog-wrapper a {
+  transition: 0.3s;
+}
+
+.catalog-wrapper a:hover {
+  transition: 0.3s;
+  color: #fff;
 }
 
 .slider-bg {
@@ -394,7 +423,7 @@ ul {
   width: auto;
 }
 
-.more-details {
+/* .more-details {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -404,7 +433,7 @@ ul {
   display: flex;
   flex: 1;
   position: relative;
-}
+} */
 
 .more-text-btn {
   position: relative;
@@ -422,7 +451,7 @@ ul {
   transition: 0.3s;
 }
 
-.more-text-btn:hover {
+/* .more-text-btn:hover {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -430,22 +459,53 @@ ul {
 }
 
 .more-text-btn:active {
-  transform: scale(1.1);
   transition: 0.3s;
   border: none;
   cursor: pointer;
   display: flex;
-}
+} */
 
-.more-details::before {
+/* .more-details::before {
   position: absolute;
-  width: 220px;
+  width: 140%;
   content: "";
   flex: 1;
   top: 50%;
   height: 8px;
   background: #ffe17f;
   transform: translateY(-50%);
+} */
+
+.yellow-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 160px;
+  height: 8px;
+  background: #ffe17f;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.yellow-line:hover {
+  background: #ffe17f;
+  transition: 0.3s ease;
+}
+
+.yellow-line--right::before {
+  width: 160px;
+  left: 0;
+}
+
+.yellow-line--extended::before {
+  left: -30%;
+  width: 160%;
+}
+
+.yellow-line--left::before {
+  width: 160px;
+  right: -70px;
 }
 
 .slider-dots {
@@ -483,13 +543,12 @@ ul {
 
 .dot-label-active:hover {
   border-color: #000000;
-  transform: scale(1.1);
   transition: 0.3s;
 }
 
 .dot-label:hover {
   border-color: #000000;
-  transform: scale(1.1);
+  background-color: #c4c4c4;
   transition: 0.3s;
 }
 
@@ -635,6 +694,11 @@ ul {
   background-color: #000;
 }
 
+.service-options {
+  height: 40px;
+  width: 100%;
+}
+
 .service-options li {
   margin-top: 20px;
   position: relative;
@@ -655,7 +719,7 @@ ul {
   z-index: 10;
 }
 
-.service-options li::before,
+/* .service-options li::before,
 .service-options li::after {
   position: absolute;
   width: 160px;
@@ -666,7 +730,7 @@ ul {
   background: #ffe17f;
   transform: translateY(-50%);
   z-index: 5;
-}
+} */
 
 .delivery a {
   background-color: #000;
@@ -675,12 +739,11 @@ ul {
 
 .guarantee a {
   position: relative;
-  right: -3px;
 }
 
-.loan a {
+.loan {
   position: relative;
-  right: -15px;
+  right: -5%;
 }
 
 .service-description {
@@ -724,6 +787,7 @@ ul {
   margin-right: auto;
   margin-top: 80px;
   background-color: #f0f0f0;
+  cursor: pointer;
 }
 
 .rare-item-delivery-container {
@@ -812,15 +876,13 @@ ul {
 
 .about-contacts {
   width: 1160px;
-  height: 100px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
   margin-top: 50px;
-  cursor: pointer;
   display: flex;
   gap: 120px;
-  margin-bottom: 35%;
+  margin-bottom: 70px;
 }
 
 .about-us {
@@ -843,9 +905,9 @@ ul {
 .contacts::before {
   content: "";
   position: absolute;
-  top: 0; /* Верхний край элемента */
-  left: 0; /* Слева */
-  width: 84px; /* Длина линии - 84px */
+  top: 0;
+  left: 0;
+  width: 84px;
   height: 7px;
   background: #000;
 }
@@ -904,6 +966,7 @@ ul {
 
 .phone-number {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .work-schedule {
@@ -938,37 +1001,27 @@ ul {
   position: relative;
   letter-spacing: 3px;
   display: flex;
-  width: 270px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
+  right: -25px;
 }
 
 .abt-more {
   position: relative;
-  right: -10%;
+  width: 270px;
+  padding-left: 3px;
 }
 
 .write-us {
   position: relative;
-  right: -15%;
+  width: 259px;
+  padding-left: 15px;
 }
 
 .abt-wrap p {
   position: relative;
   z-index: 10;
-  width: 270px;
-}
-
-.abt-wrap::before {
-  position: absolute;
-  width: 270px;
-  content: "";
-  top: 50%;
-  height: 8px;
-  background: #ffe17f;
-  transform: translateY(-50%);
-  z-index: -1;
 }
 
 .address,
@@ -1093,4 +1146,89 @@ ul {
   font-size: 18px;
   font-weight: 400;
   color: #444444;
+}
+
+.footer-bg {
+  background-color: #444444;
+  height: 321px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+}
+
+.footer-logo {
+  position: absolute;
+}
+
+.info-wrap {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  display: flex;
+  padding-top: 80px;
+  justify-content: space-between;
+}
+
+.footer-services {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 18px;
+  gap: 35px;
+  text-transform: uppercase;
+  align-items: center;
+  position: relative;
+  left: -35px;
+  list-style: none;
+}
+
+.footer-services a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.footer-services a:hover {
+  color: #ffc700;
+  transition: 0.3s;
+}
+
+.footer-phone {
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  padding-top: 50px;
+  gap: 15px;
+  justify-content: center;
+}
+
+.icons li {
+  transition: 0.3s;
+}
+
+.icons li:hover {
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  bottom: 65px;
+  width: 80px;
+  height: 7px;
+  background: #ffc700;
 }
