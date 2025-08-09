@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <header class="logo">
+    <header class="logo" id="header">
       <div class="container">
         <div class="header-bg">
           <div class="logo-wrapper">
@@ -126,9 +126,9 @@
                 лазером, замаскированным под стандартную камеру.
               </p>
               <div class="details">
-                <button class="more-text-btn yellow-line yellow-line--extended">
-                  Подробнее
-                </button>
+                <div class="btn-wrap">
+                  <button class="more-text-btn yellow-line">Подробнее</button>
+                </div>
                 <div class="slider-dots">
                   <input
                     type="radio"
@@ -267,12 +267,10 @@
             <ul class="service-options">
               <li class="delivery"><a href="#delivery">Доставка</a></li>
               <li class="guarantee">
-                <a href="#guarantee" class="yellow-line yellow-line--right">
-                  Гарантия
-                </a>
+                <a href="#guarantee" class="yellow-selector"> Гарантия </a>
               </li>
               <li class="loan">
-                <a href="#loan" class="yellow-line"> Кредит </a>
+                <a href="#loan" class="yellow-selector"> Кредит </a>
               </li>
             </ul>
           </div>
@@ -335,9 +333,7 @@
             <li class="abt-delivery-company">ТоксБерри</li>
           </ul>
           <div class="abt-wrap">
-            <p class="abt-more yellow-line yellow-line--left">
-              Подробнее о нас
-            </p>
+            <button class="abt-more-btn yellow-line">Подробнее о нас</button>
           </div>
         </div>
         <div class="contacts">
@@ -351,7 +347,11 @@
             <li class="address">
               Санкт-Петербург, набережная реки Карповки, 5, литера П.
             </li>
-            <li class="phone-number">+7 (812) 812-12-12</li>
+            <li>
+              <a href="tel:+78128121212" class="phone-number">
+                +7 (812) 812-12-12
+              </a>
+            </li>
           </ul>
           <div class="work-schedule">
             <p class="ws-title">Время работы</p>
@@ -361,7 +361,7 @@
             </ul>
           </div>
           <div class="abt-wrap">
-            <p class="write-us yellow-line yellow-line--left">Напишите нам</p>
+            <button class="write-us-btn yellow-line">Напишите нам</button>
           </div>
         </div>
       </div>
@@ -394,12 +394,14 @@
       <div class="footer-bg">
         <div class="footer-container">
           <span class="footer-logo">
-            <img
-              src="index_pics/footer-logo.svg"
-              alt="footer-device"
-              width="145"
-              height="36"
-            />
+            <a href="#header">
+              <img
+                src="index_pics/footer-logo.svg"
+                alt="footer-device"
+                width="145"
+                height="36"
+              />
+            </a>
           </span>
           <div class="info-wrap">
             <p class="footer-address">
@@ -413,37 +415,39 @@
               </li>
               <li><a href="#contacts" class="footer-contacts">Контакты</a></li>
             </ul>
-            <p class="footer-phone">Тел.: +7 (812) 812-12-12</p>
+            <a href="tel:+78128121212" class="footer-phone">
+              Тел.: +7 (812) 812-12-12
+            </a>
           </div>
           <div class="icons-wrap">
             <ul class="icons">
               <li class="facebook-icon">
                 <a href="#facebook">
                   <img
-                    src="index_pics/F-icon.svg"
+                    src="index_pics/f-sign.svg"
                     alt="facebook"
-                    width="40"
-                    height="40"
+                    width="9"
+                    height="18"
                   />
                 </a>
               </li>
               <li class="instagram-icon">
                 <a href="#instagram">
                   <img
-                    src="index_pics/inst-icon.svg"
+                    src="index_pics/i-sign.svg"
                     alt="instagram"
-                    width="40"
-                    height="40"
+                    width="16"
+                    height="16"
                   />
                 </a>
               </li>
               <li class="twitter-icon">
                 <a href="#twitter">
                   <img
-                    src="index_pics/t-icon.svg"
+                    src="index_pics/t-sign.svg"
                     alt="twitter"
-                    width="40"
-                    height="40"
+                    width="15"
+                    height="14"
                   />
                 </a>
               </li>

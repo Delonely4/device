@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #000000;
   border-top: 20px solid hsl(0, 0%, 100%);
@@ -413,31 +417,21 @@ ul {
 }
 
 .details {
-  position: relative;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  gap: 250px;
+  gap: 200px;
   margin-bottom: 80px;
   width: auto;
 }
 
-/* .more-details {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 2px;
-  width: 100%;
-  display: flex;
-  flex: 1;
-  position: relative;
-} */
+.btn-wrap {
+  width: 220px;
+  transition: 0.4s;
+}
 
 .more-text-btn {
-  position: relative;
-  right: -43px;
+  display: flex;
   z-index: 1;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -448,64 +442,31 @@ ul {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s;
+  width: 220px;
+  justify-content: center;
 }
 
-/* .more-text-btn:hover {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+.yellow-line {
+  position: relative;
+  transition: 0.4s;
 }
-
-.more-text-btn:active {
-  transition: 0.3s;
-  border: none;
-  cursor: pointer;
-  display: flex;
-} */
-
-/* .more-details::before {
-  position: absolute;
-  width: 140%;
-  content: "";
-  flex: 1;
-  top: 50%;
-  height: 8px;
-  background: #ffe17f;
-  transform: translateY(-50%);
-} */
 
 .yellow-line::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -10%;
-  width: 160px;
+  width: 100%;
   height: 8px;
   background: #ffe17f;
   transform: translateY(-50%);
   z-index: -1;
+  transition: 0.4s;
 }
 
 .yellow-line:hover {
   background: #ffe17f;
-  transition: 0.3s ease;
-}
-
-.yellow-line--right::before {
-  width: 160px;
-  left: 0;
-}
-
-.yellow-line--extended::before {
-  left: -30%;
-  width: 160%;
-}
-
-.yellow-line--left::before {
-  width: 160px;
-  right: -70px;
+  transition: 0.4s;
 }
 
 .slider-dots {
@@ -682,6 +643,7 @@ ul {
   flex: 0 0 280px;
   position: relative;
   bottom: -70px;
+  width: 160px;
 }
 
 .services-left::after {
@@ -695,13 +657,12 @@ ul {
 }
 
 .service-options {
-  height: 40px;
-  width: 100%;
+  height: 190px;
+  width: 280px;
 }
 
 .service-options li {
   margin-top: 20px;
-  position: relative;
 }
 
 .service-options a {
@@ -712,38 +673,61 @@ ul {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 15px 20px;
+  padding: 15px 0 15px 0;
   background-color: transparent;
   color: #000;
-  position: relative;
   z-index: 10;
+  width: 160px;
 }
 
-/* .service-options li::before,
-.service-options li::after {
-  position: absolute;
+.yellow-selector {
+  position: relative;
+  display: block;
+  text-align: center;
   width: 160px;
+  transition: 0.4s;
+}
+
+.yellow-selector::before {
   content: "";
-  flex: 1;
+  position: absolute;
   top: 50%;
+  left: 50%;
+  width: 100%;
   height: 8px;
   background: #ffe17f;
-  transform: translateY(-50%);
-  z-index: 5;
-} */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.yellow-selector:hover {
+  background: #ffe17f;
+  transition: 0.4s;
+  width: 100%;
+}
 
 .delivery a {
-  background-color: #000;
   color: #ffe17f;
+  text-align: center;
+}
+
+.delivery {
+  background: #000;
+  width: 280px;
 }
 
 .guarantee a {
+  display: block;
+  width: 160px;
+  text-align: center;
   position: relative;
 }
 
-.loan {
+.loan a {
+  display: block;
+  width: 160px;
+  text-align: center;
   position: relative;
-  right: -5%;
 }
 
 .service-description {
@@ -983,12 +967,18 @@ ul {
 
 .delivery-company {
   font-family: "Rubik", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #000;
   list-style-type: disc;
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.delivery-company li {
+  padding-left: 30px;
+  text-indent: -10px;
+  font-size: 18px;
 }
 
 .delivery-company li::marker {
@@ -996,32 +986,42 @@ ul {
 }
 
 .abt-wrap {
-  text-transform: uppercase;
-  z-index: 10;
-  position: relative;
-  letter-spacing: 3px;
-  display: flex;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  right: -25px;
-}
-
-.abt-more {
-  position: relative;
   width: 270px;
-  padding-left: 3px;
+  transition: 0.3s ease;
 }
 
-.write-us {
-  position: relative;
-  width: 259px;
-  padding-left: 15px;
+.abt-more-btn {
+  display: flex;
+  z-index: 1;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  justify-content: center;
+  width: 100%;
 }
 
-.abt-wrap p {
-  position: relative;
-  z-index: 10;
+.write-us-btn {
+  display: flex;
+  z-index: 1;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  justify-content: center;
+  width: 100%;
 }
 
 .address,
@@ -1151,7 +1151,6 @@ ul {
 .footer-bg {
   background-color: #444444;
   height: 321px;
-  margin-top: 10px;
   width: 100%;
 }
 
@@ -1205,6 +1204,7 @@ ul {
   text-decoration: underline;
   display: flex;
   align-items: center;
+  color: #ffffff;
 }
 
 .icons {
@@ -1215,13 +1215,26 @@ ul {
 }
 
 .icons li {
-  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #919191;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.icons img {
+  bottom: -2px;
+  position: relative;
 }
 
 .icons li:hover {
   background: #fff;
   border-radius: 50%;
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
 .footer-container::before {
